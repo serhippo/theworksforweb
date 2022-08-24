@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Ahmed Heikal Andromeda">
+	<title>PBO: UML - Activity Diagram</title>
+	<link rel="canonical" href="">
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+	<!-- Bootstrap Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	<!-- Custom CSS -->
+	<link href="pbo-uml.css" rel="stylesheet">
+</head>
+
+<body>
+	
+<header>
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+		<div class="container-fluid">
+			<!--<a class="navbar-brand" href="../pbo-uml/index.html">PBO-UML</a>-->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav me-auto mb-2 mb-md-0">
+					<li class="nav-item">
+						<a class="nav-link" href="./pbo-uml-index.html"><i class="bi bi-info-square-fill"></i> Beranda</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./pbo-uml-use-case.html"><i class="bi bi-1-square-fill"></i> Use Case</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./pbo-uml-activity.html"><i class="bi bi-2-square-fill"></i> Activity</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./pbo-uml-class.html"><i class="bi bi-3-square-fill"></i> Class</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./pbo-uml-sequence.html"><i class="bi bi-4-square-fill"></i> Sequence</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<main>
+	<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+		<img src="./img/splash-activity.webp" class="splash-img">
+		<div class="container">
+			<div class="carousel-caption text-start">
+			<h1>Activity Diagram</h1>
+			<p>Diagram yang menunjukkan alur kegiatan pengguna dalam pemakaian sebuah perangkat lunak.</p>
+			</div>
+		</div>
+		</div>
+	</div>
+	</div>
+
+
+	<!-- Marketing messaging and featurettes
+	================================================== -->
+	<!-- Wrap the rest of the page in another container to center all the content. -->
+
+	<div class="container marketing">
+	
+
+	<div class="row featurette">
+		<div class="col-md-7 d-flex flex-column justify-content-center">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0">Apa itu Initial Node dan Final Node?</h2>
+		<p class="lead">Initial Node adalah penanda awal satu set aktivitas dalam diagram ini.</p>
+		<p class="lead">Initial Node digambarkan dengan lingkaran penuh.</p>
+		<p class="lead">Final Node adalah penanda akhir satu set aktivitas dalam diagram ini.</p>
+		<p class="lead">Final Node digambarkan dengan lingkaran penuh dengan tambahan lingkaran luar.</p>
+		<p class="lead">Disarankan tiap diagram memiliki 1 Initial Node dan 1 Final Node.</p>		
+		</div>
+		<div class="col-md-5 d-flex">
+		<img src="./img/diagram-activity-1.svg" class="featurette-image img-fluid mx-auto">
+
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette">
+		<div class="col-md-7 order-md-2 d-flex flex-column justify-content-center">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0">Apa itu Activity dan Activity Edge?</h2>
+		<p class="lead">Activity adalah kegiatan yang dilakukan di dalam perangkat lunak.</p>
+		<p class="lead">Activity digambarkan dalam bentuk persegi panjang bulat.</p>
+		<p class="lead">Nama Activity umumnya berstruktur Kata-Kerja-Kata-Benda.</p>
+		<p class="lead">Activity Edge adalah garis panah yang menunjukkan alur Activity.</p>
+		</div>
+		<div class="col-md-5 order-md-1 d-flex">
+		<img src="./img/diagram-activity-2.svg" class="featurette-image img-fluid mx-auto">
+
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette">
+		<div class="col-md-7 d-flex flex-column justify-content-center">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0">Apa itu Fork Node dan Join Node?</h2>
+		<p class="lead">Fork Node dan Join Node menyatakan beberapa alur aktivitas yang terjadi bersamaan.</p>
+		<p class="lead">Fork Node dan Join Node digambarkan dengan garis lurus tebal.</p>
+		<p class="lead">Fork Node memiliki satu Edge masuk dansetidaknya dua Egde keluar.</p>
+		<p class="lead">Join Node memiliki setidaknya dua Edge masuk dan satu Egde keluar.</p>
+		<p class="lead">Fork Node dan Join Node wajib berpasangan.</p>		
+		</div>
+		<div class="col-md-5 d-flex">
+		<img src="./img/diagram-activity-3.svg" class="featurette-image img-fluid mx-auto">
+
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+	
+	<div class="row featurette">
+		<div class="col-md-7 order-md-2 d-flex flex-column justify-content-center">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0">Apa itu Decision Node dan Merge Node?</h2>
+		<p class="lead">Decision Node dan Merge Node menyatakan alur kegiatan yang berkondisi.</p>
+		<p class="lead">Decision Node dan Join Node digambarkan dengan wajik.</p>
+		<p class="lead">Kondisi kegiatan dituliskan pada Edge yang keluar dari Decision Node</p>
+		<p class="lead">Decision Node memiliki satu Edge masuk dan setidaknya dua Egde keluar.</p>
+		<p class="lead">Merge Node memiliki setidaknya dua Edge masuk dan satu Egde keluar.</p>
+		<p class="lead">Pada umumnya Decision Node dan Merge Node wajib berpasangan.</p>		
+		</div>
+		<div class="col-md-5 order-md-1 d-flex">
+		<img src="./img/diagram-activity-4.svg" class="featurette-image img-fluid mx-auto">
+
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+	
+	<div class="row featurette">
+		<div class="col-md-7 d-flex flex-column justify-content-center">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0">Apa itu Accept Event Action?</h2>
+		<p class="lead">Accept Event Action atau Trigger menyatakan kegiatan yang dapat terjadi kapanpun jika suatu syarat tercapai.</p>
+		<p class="lead">Accept Event Action digambarkan bendera.</p>
+		<p class="lead">Accept Event Action bersatu dengan alur kegiatan utama melalui sebuah Merge Node yang tidak memiliki Decision Node.</p>
+		</div>
+		<div class="col-md-5 d-flex">
+		<img src="./img/diagram-activity-5.svg" class="featurette-image img-fluid mx-auto">
+
+		</div>
+	</div>
+	
+	<hr class="featurette-divider">
+	
+	<div class="row featurette">
+		<div class="col-12">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0 text-center pb-4">Bagaimana contoh yang benar?</h2>
+		</div>
+		<div class="col-12 order-3">
+		<ol class="lead pt-4">
+			<li>Diagram boleh disusun vertikal, horizontal, atau gabungan keduanya.</li>
+			<li>Apakah kegiatan yang dilakukan setelah user melakukan Logout?</li>
+			<li>Apakah <span class="text-monospace">Verifikasi Password</span> dan <span class="text-monospace">Verifikasi Username</span> adalah pilihan?</li>
+			<li>Mengapa Merge Node <span class="text-monospace">[Verifikasi gagal]</span> tidak berada setelah Decision Node-nya?</li>
+		</ol>
+		</div>
+		<div class="col-md-10 offset-md-1 d-flex">
+		<img src="./img/diagram-activity-6.svg" class="featurette-image img-fluid mx-auto">
+
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette">
+		<div class="col-12">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0 text-center pb-4">Bagaimana contoh yang salah?</h2>
+		</div>
+		<div class="col-12 order-3">
+		<ol class="lead pt-4">
+			<li>Ada lebih dari satu Activity Edge yang masuk ke sebuah Activity.</li>
+			<li>Hanya ada 1 kegiatan di aantara Fork Node dan Join Node.</li>
+			<li>Adanya Decision Node tanpa Merge Node.</li>
+			<li>Adanya Decision Node tanpa syarat kondisi.</li>
+			<li>Accept Event Action tidak menyatu ke diagram utama.</li>
+			<li>Activity Edge tidak berupa garis panah.</li>
+			<li>Ada lebih dari satu Activity Edge yang keluar dari sebuah Activity.</li>
+			<li>Activity tidak berkelanjutan atau buntu.</li>
+			<li>Ada dua Activity Edge menuju Final Node. Tidak sepenuhnya salah, tapi sebaiknya dihindari.</li>
+		</ol>
+		</div>
+		<div class="col-md-10 offset-md-1 d-flex">
+		<img src="./img/diagram-activity-7.svg" class="featurette-image img-fluid mx-auto">
+
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette">
+		<div class="col-12">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0 text-center">Tugas</h2>
+		<p class="lead">Buatlah Activity Diagram berdasarkan topik dari dosen!</p>
+		</div>
+		<div class="col-md-6">
+		<p class="lead">Penambahan Nilai berdasarkan (maksimal 100):</p>
+		<ul class="lead">
+			<li>Ada 24 Activity yang benar: +15</li>
+			<li>Ada 48 Activity yang benar: +5</li>
+			<li>Ada 72 Activity yang benar: +5</li>
+			<li>Ada 96 Activity yang benar: +5</li>
+			<li>Ada 120 Activity yang benar: +5</li>
+			<li>Ada 240 Activity yang benar: +5</li>
+			<li>Ada 1 Fork Node berisi 8 Activity yang benar: +15</li>
+			<li>Ada 2 Fork Node yang masing-masing berisi 8 Activity yang benar: +5</li>
+			<li>Ada 4 Fork Node yang masing-masing berisi 8 Activity yang benar: +5</li>
+			<li>Ada 8 Fork Node yang masing-masing berisi 8 Activity yang benar: +5</li>
+			<li>Ada 16 Fork Node yang masing-masing berisi 8 Activity yang benar: +5</li>
+			<li>Ada 1 Decision Node berisi 8 Activity yang benar: +15</li>
+			<li>Ada 2 Decision Node yang masing-masing berisi 8 Activity yang benar: +5</li>
+			<li>Ada 4 Decision Node yang masing-masing berisi 8 Activity yang benar: +5</li>
+			<li>Ada 8 Decision Node yang masing-masing berisi8 Activity yang benar: +5</li>
+			<li>Ada 16 Fork Node yang masing-masing berisi 8 Activity yang benar: +5</li>
+			<li>Ada 1 aksi terima kejadian yang benar: +10</li>
+			<li>Ada 2 aksi terima kejadian yang benar: +5</li>
+			<li>Ada 4 aksi terima kejadian yang benar: +5</li>
+			<li>Ada 8 aksi terima kejadian yang benar: +5</li>
+			<li>Ada 16 aksi terima kejadian yang benar: +5</li>
+			<li>Ada 16 aksi terima kejadian yang benar: +5</li>
+		</ul>
+		</div>
+		<div class="col-md-6">
+		<p class="lead">Pengurangan Nilai berdasarkan:</p>
+		<ul class="lead">
+			<li>Ada lebih dari satu Activity Edge yang masuk ke sebuah Activity.</li>
+			<li>Ada lebih dari satu Activity Edge yang keluar dari sebuah Activity.</li>
+			<li>Hanya ada 1 kegiatan di aantara Fork Node dan Join Node.</li>
+			<li>Adanya Fork Node tanpa Join Node.</li>
+			<li>Adanya Decision Node tanpa Merge Node.</li>
+			<li>Adanya Decision Node tanpa syarat kondisi.</li>
+			<li>Accept Event Action tidak menyatu ke diagram utama.</li>
+			<li>Activity Edge tidak berupa garis panah.</li>
+			<li>Activity tidak berkelanjutan atau buntu.</li>
+			<li>Ada lebih dari satu Activity Edge menuju Final Node. Tidak sepenuhnya salah, tapi sebaiknya dihindari.</li>
+		</ul>
+		</div>
+		<div class="col-12 mt-4">
+		<p class="lead">Catatan:</p>
+		<ul class="lead">
+			<li>Penambahan Nilai maksimal adalah 100.
+			<li>Pengurangan Nilai pertama bernilai -30, selebihnya -5.</li>
+			<li>Nilai akhir adalah:  <span class="text-monospace">Penambahan Nilai - Pengurangan Nilai</span></li>
+			<li>Mahasiswa diizinkan merevisi tugas selama batas waktu pengumpulan dan revisi belum dilewati.</li>
+		</ul>
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<!-- /END THE FEATURETTES -->
+
+	</div><!-- /.container -->
+
+
+	<!-- FOOTER -->
+	<footer class="container">
+	<p class="float-end"><a href="#">Back to top</a></p>
+	<p>&copy; 2022–2022 Ahmed Heikal Andromeda &middot; Politeknik Negeri Jakarta</p>
+	</footer>
+</main>
+		
+</body>
+</html>

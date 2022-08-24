@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Ahmed Heikal Andromeda">
+	<title>PBO: UML - Use Case Diagram</title>
+	<link rel="canonical" href="">
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+	<!-- Bootstrap Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	<!-- Custom CSS -->
+	<link href="pbo-uml.css" rel="stylesheet">
+</head>
+
+<body>
+	
+<header>
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+		<div class="container-fluid">
+			<!--<a class="navbar-brand" href="../pbo-uml/index.html">PBO-UML</a>-->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav me-auto mb-2 mb-md-0">
+					<li class="nav-item">
+						<a class="nav-link" href="./pbo-uml-index.html"><i class="bi bi-info-square-fill"></i> Beranda</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./pbo-uml-use-case.html"><i class="bi bi-1-square-fill"></i> Use Case</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./pbo-uml-activity.html"><i class="bi bi-2-square-fill"></i> Activity</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./pbo-uml-class.html"><i class="bi bi-3-square-fill"></i> Class</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./pbo-uml-sequence.html"><i class="bi bi-4-square-fill"></i> Sequence</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<main>
+	<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+		<img src="./img/splash-use-case.webp" class="splash-img">
+		<div class="container">
+			<div class="carousel-caption text-start">
+			<h1>Use Case Diagram</h1>
+			<p>Diagram yang menunjukkan "apa yang bisa dilakukan perangkat lunak".</p>
+			</div>
+		</div>
+		</div>
+	</div>
+	</div>
+
+
+	<!-- Marketing messaging and featurettes
+	================================================== -->
+	<!-- Wrap the rest of the page in another container to center all the content. -->
+
+	<div class="container marketing">
+	
+	<div class="row">
+		<div class="col">
+		<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/zid-MVo7M-E?rel=0" class="embed-responsive-item" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette">
+		<div class="col-md-7 d-flex flex-column justify-content-center">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0">Apa itu System?</h2>
+		<p class="lead">System adalah perangkat lunak yang akan Anda buat, bisa berupa aplikasi, game, bahkan website.</p>
+		<p class="lead">System digambarkan dalam bentuk persegi panjang untuk meletakkan use case anda nantinya.</p>
+		<p class="lead">Nama System diletakkan di bagian atas persegi panjang,umumnya dinyatakan dalam nama perangkat lunak yang Anda buat.</p>
+		<p class="lead">System menggambarkan ruang lingkup perangkat lunak Anda. Use Case yang anda letakkan di dalam System adalah Use Case yang terjadi langsung dalam perangkat lunak tersebut.</p>
+		</div>
+		<div class="col-md-5 d-flex">
+		<img src="./img/diagram-uc-1.svg" class="featurette-image img-fluid mx-auto">
+
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette">
+		<div class="col-md-7 order-md-2 d-flex flex-column justify-content-center">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0">Apa itu Actor?</h2>
+		<p class="lead">Actor adalah apapun yang berinteraksi dengan System.</p>
+		<p class="lead">Actor umumnya adalah manusia, tapi bisa juga organisasi, atau program lain.</p>
+		<p class="lead">Actor digambarkan dalam bentuk orang-orangan.</p>
+		<p class="lead">Actor terbagi atas Primary Actor dan Secondary Actor.</p>
+		<p class="lead">Primary Actor menginisiasi penggunaan System dan ditempatkan di sebelah kiri System.</p>
+		<p class="lead">Secondary Actor melakukan reaksi terhadap inisiasi Primary Actor dan ditempatkan di sebelah kanan System.</p>
+		<p class="lead">Pada umumnya perangkat lunak hanya memiliki Primary Actor saja.</p>
+		</div>
+		<div class="col-md-5 order-md-1 d-flex">
+		<img src="./img/diagram-uc-2.svg" class="featurette-image img-fluid mx-auto">
+
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette">
+		<div class="col-md-7 d-flex flex-column justify-content-center">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0">Apa itu Use Case?</h2>
+		<p class="lead">Use Case melambangkan kegiatan yang dilakukan sistem atas inisiasi (Primary) Actor.</p>
+		<p class="lead">Use Case digambarkan dalam bentuk oval, dan ditempatkan dalam System.</p>
+		<p class="lead">Hubungan antara Primary Actor penginisiasi dan Use-Case-nya digambarkan dengan garis biasa.</p>
+		<p class="lead">Nama Use Case umumnya berstruktur Kata-Kerja-Kata-Benda.</p>
+		<p class="lead">Satu Use Case umumnya hanya diinisiasi oleh satu Primary Actor.</p>
+		<p class="lead">Use Case yang berhubungan dengan lebih dari satu Primary Actor bearti Use Case tersebut memerlukan lebih dari satu Primary Actor untuk dapat berjalan (sangat tidak lazim).</p>
+		</div>
+		<div class="col-md-5 d-flex">
+		<img src="./img/diagram-uc-3.svg" class="featurette-image img-fluid mx-auto">
+
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+	
+	<div class="row featurette">
+		<div class="col-md-7 order-md-2 d-flex flex-column justify-content-center">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0">Apa itu include?</h2>
+		<p class="lead">Include menyatakan hubungan antara 2 Use Case, dimana Use Case yang dinisisiasi oleh Actor (Base Use Case) akan ikut menjalankan Use Case yang dipanah (Included Use Case).</p>
+		<p class="lead">Include digambarkan dalam bentuk panah terputus dengan tulisan <span class="text-monospace">&lt;&lt;include&gt;&gt;</span> di tengahnya.</p>
+		<p class="lead">Included Use Case atau Use Case yang dipanah, tidak perlu berhubungan dengan Actor karena akan berjalan begitu Actor menjalankan Base Use Case-nya.</p>
+		<p class="lead">Sebagai contoh: <span class="text-monospace">Login --&lt;&lt;include&gt;&gt;--&gt; Verifikasi Password</span>. Ini berarti di saat Actor melakukan <span class="text-monospace">Login</span>, maka <span class="text-monospace">Verifikasi Password</span> akan berjalan setidaknya satu kali selama proses <span class="text-monospace">Login</span> berjalan.</p>
+		</div>
+		<div class="col-md-5 order-md-1 d-flex">
+		<img src="./img/diagram-uc-4.svg" class="featurette-image img-fluid mx-auto">
+
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette">
+		<div class="col-md-7 d-flex flex-column justify-content-center">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0">Apa itu extend?</h2>
+		<p class="lead">Extend juga menyatakan hubungan antara 2 Use Case, dimana ketika Use Case yang dinisisiasi oleh Actor (Base Use Case) memenuhi syarat tertentu, maka Use Case yang memanah (Extend Use Case) baru akan berjalan.</p>
+		<p class="lead">Extend digambarkan dalam bentuk panah terputus dengan tulisan <span class="text-monospace">&lt;&lt;extend&gt;&gt;</span> di tengahnya.</p>
+		<p class="lead">Mirip dengan Include, Extend Use Case atau Use Case yang memanah, tidak perlu berhubungan dengan Actor karena akan berjalan begitu Actor menjalankan Base Use Case-nya.</p>
+		<p class="lead">Sebagai contoh: <span class="text-monospace">Login &lt;--&lt;&lt;extend&gt;&gt;-- Tampilkan Pesan Eror Login</span>. Ini berarti di saat Actor melakukan <span class="text-monospace">Login</span>, maka <span class="text-monospace">Tampilkan Pesan Eror Login</span> hanya akan berjalan jika kondisi tertentu terpenuhi, dalam kasus ini, di saat Actor salah memasukkan informasi Login.</p>
+		</div>
+		<div class="col-md-5 d-flex">
+		<img src="./img/diagram-uc-5.svg" class="featurette-image img-fluid mx-auto">
+
+		</div>
+	</div>
+	<hr class="featurette-divider">
+	
+	<div class="row featurette">
+		<div class="col-md-7 order-md-2 d-flex flex-column justify-content-center">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0">Apa itu Generalization?</h2>
+		<p class="lead">Generalization adalah hubungan antar Actor yang menyatakan bahwa ada kesamaan Use Case yang dapat digunakan oleh Actor-Actor terkait.</p>
+		<p class="lead">Generalization digambarkan dengan panah antar Actor.</p>
+		<p class="lead">Actor yang memanah akan dapat menjalankan semua Use Case yang berhubungan dengan Actor yang dipanah, tetapi tidak sebaliknya.</p>
+		<p class="lead">Sebagai contoh, Actor <span class="text-monospace">Professional User</span> dapat melakukan <span class="text-monospace">Login</span> dan Use Case lain milik <span class="text-monospace">User</span>, tetapi <span class="text-monospace">User</span> tidak dapat melakukan <span class="text-monospace">Lihat Insight</span> yang hanya berasosiasi dengan <span class="text-monospace">Professional User</span>. </p>
+		</div>
+		<div class="col-md-5 order-md-1 d-flex">
+		<img src="./img/diagram-uc-6.svg" class="featurette-image img-fluid mx-auto">
+
+		</div>
+	</div>
+	<hr class="featurette-divider">
+
+	<div class="row featurette">
+		<div class="col-12">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0 text-center pb-4">Bagaimana contoh yang benar?</h2>
+		</div>
+		<div class="col-12 order-3">
+		<ol class="lead pt-4">
+			<li>Apakah nama perangkat lunak yang dibuat?</li>
+			<li>Ada berapa include dan berapa extend?</li>
+			<li>Apa sajakah Use Case yang dapat diinisiasi oleh <span class="text-monospace">Professional User</span>?</li>
+			<li>Apakah <span class="text-monospace">Menggunakan Filter</span> akan berjalan saat User melakukan <span class="text-monospace">Buat Post</span>?</li>
+		</ol>
+		</div>
+		<div class="col-md-10 offset-md-1 d-flex">
+		<img src="./img/diagram-uc-7.svg" class="featurette-image img-fluid mx-auto">
+
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette">
+		<div class="col-12">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0 text-center pb-4">Bagaimana contoh yang salah?</h2>
+		</div>
+		<div class="col-12 order-3">
+		<ol class="lead pt-4">
+			<li>Use Case <span class="text-monospace">Reel</span> hanya memiliki kata benda, sehingga kegiatan Actor-nya kurang jelas</li>
+			<li>Generalisasi seperti ini berarti <span class="text-monospace">User</span>dapat melakukan <span class="text-monospace">Lihat Insight</span>, tetapi <span class="text-monospace">Professional User</span> hanya dapat melakukan <span class="text-monospace">Lihat Insight</span> saja dan tidak bisa melakukan <span class="text-monospace">Login</span></li>
+			<li>Use Case yang bukan merupakan kegiatan, seperti <span class="text-monospace">Tidak mengubah profil</span>.</li>
+			<li>Use Case di luar perangkat lunak, seperti <span class="text-monospace">Menerima OTP</span>.</li>
+			<li>Penggunaan &lt;&lt;include&gt;&gt; atau  &lt;&lt;extend&gt;&gt; yang kurang tepat: Di saat User melakukan <span class="text-monospace">Buat Post</span>, maka <span class="text-monospace">User</span> akan langsung dipaksa menggunakan <span class="text-monospace">Mengunggah gambar</span>, <span class="text-monospace">Mengunggah video</span>, dan <span class="text-monospace">Menggunakan filter</span>.</li>
+			<li>Garis hubungan antar Actor dan Use Case menggunakan panah. Garis ini hanya boleh berupa garis biasa.</li>
+			<li>Adanya garis biasa yang mengubungkan Use Case. Hubungan antar Use Case hanya boleh berupa &lt;&lt;include&gt;&gt; atau  &lt;&lt;extend&gt;&gt;</li>
+		</ol>
+		</div>
+		<div class="col-md-10 offset-md-1 d-flex">
+		<img src="./img/diagram-uc-8.svg" class="featurette-image img-fluid mx-auto">
+
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette">
+		<div class="col-12">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0 text-center">Tugas</h2>
+		<p class="lead">Buatlah Use Case Diagram berdasarkan topik dari dosen!</p>
+		</div>
+		<div class="col-md-6">
+		<p class="lead">Penambahan Nilai berdasarkan (maksimal 100):</p>
+		<ul class="lead">
+			<li>Ada 8 Use Case yang benar: +15</li>
+			<li>Ada 16 Use Case yang benar: +5</li>
+			<li>Ada 32 Use Case yang benar: +5</li>
+			<li>Ada 64 Use Case yang benar: +5</li>
+			<li>Ada 128 Use Case yang benar: +5</li>
+			<li>Ada 2 extend yang benar: +15</li>
+			<li>Ada 4 extend yang benar: +5</li>
+			<li>Ada 8 extend yang benar: +5</li>
+			<li>Ada 16 extend yang benar: +5</li>
+			<li>Ada 32 extend yang benar: +5</li>
+			<li>Ada 64 extend yang benar: +5</li>
+			<li>Ada 2 include yang benar: +15</li>
+			<li>Ada 4 include yang benar: +5</li>
+			<li>Ada 8 include yang benar: +5</li>
+			<li>Ada 16 include yang benar: +5</li>
+			<li>Ada 32 include yang benar: +5</li>
+			<li>Ada 64 include yang benar: +5</li>
+			<li>Ada 1 generalisasi yang benar: +10</li>
+			<li>Ada 2 generalisasi yang benar: +5</li>
+			<li>Ada 4 generalisasi yang benar: +5</li>
+			<li>Ada 8 generalisasi yang benar: +5</li>
+		</ul>
+		</div>
+		<div class="col-md-6">
+		<p class="lead">Pengurangan Nilai berdasarkan:</p>
+		<ul class="lead">
+			<li>Use Case hanya memiliki kata kerja atau kata benda tanpa konteks yang jelas</li>
+			<li>Generalisasi untuk 2 aktor yang tidak memiliki kesamaan</li>
+			<li>Use Case yang bukan merupakan kegiatan, seperti <span class="text-monospace">Tidak mengubah profil</span>.</li>
+			<li>Use Case di luar perangkat lunak, seperti <span class="text-monospace">Menerima OTP</span>.</li>
+			<li>Penggunaan &lt;&lt;include&gt;&gt; atau  &lt;&lt;extend&gt;&gt; yang kurang tepat</li>
+			<li>Garis hubungan antar Actor dan Use Case menggunakan panah. Garis ini hanya boleh berupa garis biasa.</li>
+			<li>Adanya garis biasa yang mengubungkan Use Case. Hubungan antar Use Case hanya boleh berupa &lt;&lt;include&gt;&gt; atau  &lt;&lt;extend&gt;&gt;</li>
+		</ul>
+		</div>
+		<div class="col-12 mt-4">
+		<p class="lead">Catatan:</p>
+		<ul class="lead">
+			<li>Penambahan Nilai maksimal adalah 100.
+			<li>Pengurangan Nilai pertama bernilai -30, selebihnya -5.</li>
+			<li>Nilai akhir adalah:  <span class="text-monospace">Penambahan Nilai - Pengurangan Nilai</span></li>
+			<li>Mahasiswa diizinkan merevisi tugas selama batas waktu pengumpulan dan revisi belum dilewati.</li>
+		</ul>
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<!-- /END THE FEATURETTES -->
+
+	</div><!-- /.container -->
+
+
+	<!-- FOOTER -->
+	<footer class="container">
+	<p class="float-end"><a href="#">Back to top</a></p>
+	<p>&copy; 2022–2022 Ahmed Heikal Andromeda &middot; Politeknik Negeri Jakarta</p>
+	</footer>
+</main>
+		
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Ahmed Heikal Andromeda">
+	<title>PBO: UML - Sequence Diagram</title>
+	<link rel="canonical" href="">
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+	<!-- Bootstrap Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	<!-- Custom CSS -->
+	<link href="pbo-uml.css" rel="stylesheet">
+</head>
+
+<body>
+	
+<header>
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+		<div class="container-fluid">
+			<!--<a class="navbar-brand" href="../pbo-uml/index.html">PBO-UML</a>-->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav me-auto mb-2 mb-md-0">
+					<li class="nav-item">
+						<a class="nav-link" href="./pbo-uml-index.html"><i class="bi bi-info-square-fill"></i> Beranda</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./pbo-uml-use-case.html"><i class="bi bi-1-square-fill"></i> Use Case</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./pbo-uml-activity.html"><i class="bi bi-2-square-fill"></i> Activity</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./pbo-uml-class.html"><i class="bi bi-3-square-fill"></i> Class</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./pbo-uml-sequence.html"><i class="bi bi-4-square-fill"></i> Sequence</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<main>
+	<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+		<img src="./img/splash-sequence.webp" class="splash-img">
+		<div class="container">
+			<div class="carousel-caption text-start">
+			<h1>Sequence Diagram</h1>
+			<p>Diagram interaksi yang menggambarkan pengiriman pesan antar lifeline.</p>
+			</div>
+		</div>
+		</div>
+	</div>
+	</div>
+
+
+	<!-- Marketing messaging and featurettes
+	================================================== -->
+	<!-- Wrap the rest of the page in another container to center all the content. -->
+
+	<div class="container marketing">
+	
+	<div class="row">
+		<div class="col">
+		<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/pCK6prSq8aw?rel=0" class="embed-responsive-item" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette">
+		<div class="col-md-7 d-flex flex-column justify-content-center">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0">Apa itu Lifeline?</h2>
+		<p class="lead">Lifeline adalah instansi yang berpartisipasi dalam interaksi yang akan digambarkan oleh diagram.</p>
+		<p class="lead">Lifeline digambarkan dalam bentuk persegi panjang. Ada garis putus-putus yang membentang tegak lurus dengan persegi panjang untuk melambangkan waktu.</p>
+		<p class="lead">Bentuk persegi panjang ini dapat dilambangkan dengan orang-orangan untuk Actor, tapi tidak wajib.</p>
+		<p class="lead">Ada persegi panjang di atas garis putus-putus ini yang melambangkan seberapa lama instansi ini aktif. Persegi panjang ini tidak dibutuhkan untuk Actor.</p>
+		<p class="lead">Kita akan menggunakan contoh login <span class="text-monospace">User</span> dari Instragram berdasarkan Use Case Diagram.</p>
+		</div>
+		<div class="col-md-5 d-flex">
+		<img src="./img/diagram-sequence-1.svg" class="featurette-image img-fluid mx-auto">
+
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette">
+		<div class="col-md-7 order-md-2 d-flex flex-column justify-content-center">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0">Apa itu Message Line?</h2>
+		<p class="lead">Message Line adalah perintah yang dikirimkan dalam bentuk pesan dari satu Lifeline ke Lifeline lain.</p>
+		<p class="lead">Message Line digambarkan dengan garis panah dengan label Operation dari Class Diagram.</p>
+		<p class="lead">Tidak ada Message Line yang segaris! Tiap Message Line baru selalu dimulai lebih turun dari sebelumnya! Perhatikan pada contoh: posisi <span class="text-monospace">verifikasiLogin()</span> yang terjadi belakangan berada lebih rendah dari <span class="text-monospace">login()</span>.</p>		
+		</div>
+		<div class="col-md-5 order-md-1 d-flex">
+		<img src="./img/diagram-sequence-2.svg" class="featurette-image img-fluid mx-auto">
+
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette">
+		<div class="col-md-7 d-flex flex-column justify-content-center">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0">Apa itu Return Line?</h2>
+		<p class="lead">Return Line adalah respon dari perintah yang diterima melalui Message Line.</p>
+		<p class="lead">Return Line digambarkan dengan garis panah putus-putus menuju instansi yang melakukan Message Line.</p>
+		<p class="lead">Return Line umumnya tidak memiliki label, tetapi bisa diberi label unuk memperjelas.</p>
+		<p class="lead">Return Line dan Message Line wajib satu pasang!</p>
+		<p class="lead">Tidak ada Return Line yang segaris! Tiap Return Line baru selalu dimulai lebih turun dari sebelumnya!</p>		
+		</div>
+		<div class="col-md-5 d-flex">
+		<img src="./img/diagram-sequence-3.svg" class="featurette-image img-fluid mx-auto">
+
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+	
+	<div class="row featurette">
+		<div class="col-md-7 order-md-2 d-flex flex-column justify-content-center">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0">Apa itu Alternative Frame?</h2>
+		<p class="lead">Alternative Frame adalah penanda bagian pada diagram yang memiliki lebih dari satu kemungkinan kejadian.</p>
+		<p class="lead">Alternative Frame digunakan di saat yang mirip dengan Decision Node pada Activity Diagram.</p>
+		<p class="lead">Alternative Frame digambarkan berupa persegi yang melingkupi kemungkikan kejadian. Syarat alternatif dituliskan, seperti <span class="text-monospace">[login berhasil]</span>, sementara alternatif tindalan ditulis <span class="text-monospace">[else]</span></p>
+		</div>
+		<div class="col-md-5 order-md-1 d-flex">
+		<img src="./img/diagram-sequence-4.svg" class="featurette-image img-fluid mx-auto">
+
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette">
+		<div class="col-12">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0 text-center pb-4">Bagaimana contoh yang benar?</h2>
+		</div>
+		<div class="col-12 order-3">
+		<ol class="lead pt-4">
+			<li>Pastikan diagram yang dibuat sesuai dengan diagram sebelumnya!</li>
+		</ol>
+		</div>
+		<div class="col-md-10 offset-md-1 d-flex">
+		<img src="./img/diagram-sequence-5.svg" class="featurette-image img-fluid mx-auto">
+
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette">
+		<div class="col-12">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0 text-center pb-4">Bagaimana contoh yang salah?</h2>
+		</div>
+		<div class="col-12 order-3">
+		<ol class="lead pt-4">
+			<li>Ada message line yang segaris, yaitu <span class="text-monospace">login()</span> dan <span class="text-monospace">verifikasiLogin()</span>.</li>
+			<li>Alternative Frame tanpa tulisan Alternative.</li>
+			<li>Alternative Frame tanpa tulisan kondisi dan Else.</li>
+			<li>Message Line tanpa Return Line.</li>
+			<li>Lifeline non-Actor tanpa persegi panjang yang melambangkan keaktifan.</li>
+		</ol>
+		</div>
+		<div class="col-md-10 offset-md-1 d-flex">
+		<img src="./img/diagram-sequence-6.svg" class="featurette-image img-fluid mx-auto">
+
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette">
+		<div class="col-12">
+		<h2 class="featurette-heading fw-normal lh-1 mt-0 text-center">Tugas</h2>
+		<p class="lead">Buatlah Sequence Diagram berdasarkan topik dari dosen!</p>
+		</div>
+		<div class="col-md-6">
+		<p class="lead">Penambahan Nilai berdasarkan (maksimal 100):</p>
+		<ul class="lead">
+			<li>Ada 2 lifeline yang benar: +15 point</li>
+			<li>Ada 4 lifeline yang benar: +10 point</li>
+			<li>Ada 8 lifeline yang benar: +5 point</li>
+			<li>Ada 16 lifeline yang benar: +5 point</li>
+			<li>Ada 1 Alternative frame yang benar: +15 point</li>
+			<li>Ada 2 Alternative frame yang benar: +10 point</li>
+			<li>Ada 4 Alternative frame yang benar: +5 point</li>
+			<li>Ada 8 Alternative frame yang benar: +5 point</li>
+			<li>Ada 4 pasang Message Line dan Return Line yang benar: +15 Point</li>
+			<li>Ada 8 pasang Message Line dan Return Line yang benar: +10 Point</li>
+			<li>Ada 16 pasang Message Line dan Return Line yang benar: +5 Point</li>
+			<li>Ada 32 pasang Message Line dan Return Line yang benar: +5 Point</li>
+			<li>Ada 64 pasang Message Line dan Return Line yang benar: +5 Point</li>
+		</ul>
+		</div>
+		<div class="col-md-6">
+		<p class="lead">Pengurangan Nilai berdasarkan:</p>
+		<ul class="lead">
+			<li>Ada message line yang segaris.</li>
+			<li>Alternative Frame tanpa tulisan Alternative.</li>
+			<li>Alternative Frame tanpa tulisan kondisi dan Else.</li>
+			<li>Message Line tanpa Return Line.</li>
+			<li>Lifeline non-Actor tanpa persegi panjang yang melambangkan keaktifan.</li>
+		</ul>
+		</div>
+		<div class="col-12 mt-4">
+		<p class="lead">Catatan:</p>
+		<ul class="lead">
+			<li>Penambahan Nilai maksimal adalah 100.
+			<li>Pengurangan Nilai pertama bernilai -30, selebihnya -5.</li>
+			<li>Nilai akhir adalah:  <span class="text-monospace">Penambahan Nilai - Pengurangan Nilai</span></li>
+			<li>Mahasiswa diizinkan merevisi tugas selama batas waktu pengumpulan dan revisi belum dilewati.</li>
+		</ul>
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<!-- /END THE FEATURETTES -->
+
+	</div><!-- /.container -->
+
+
+	<!-- FOOTER -->
+	<footer class="container">
+	<p class="float-end"><a href="#">Back to top</a></p>
+	<p>&copy; 2022–2022 Ahmed Heikal Andromeda &middot; Politeknik Negeri Jakarta</p>
+	</footer>
+</main>
+		
+</body>
+</html>
